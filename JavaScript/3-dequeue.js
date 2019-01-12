@@ -1,9 +1,11 @@
 'use strict';
+const EventEmitter = require('events');
 
 class Dequeue {
   constructor() {
     this.first = null;
     this.last = null;
+    this._emitter = new EventEmitter();
   }
   push(item) {
     const last = this.last;
@@ -15,6 +17,7 @@ class Dequeue {
       this.first = element;
       this.last = element;
     }
+    this._emitter.emit('push', element.item, this);
   }
   pop() {
     const element = this.last;
@@ -25,6 +28,7 @@ class Dequeue {
     } else {
       this.last = element.prev;
     }
+    this._emitter.emit('pop', element.item, this);
     return element.item;
   }
   unshift(item) {
@@ -37,6 +41,7 @@ class Dequeue {
       this.first = element;
       this.last = element;
     }
+    this._emitter.emit('unshift', element.item, this);
   }
   shift() {
     const element = this.first;
@@ -47,7 +52,29 @@ class Dequeue {
     } else {
       this.first = element.next;
     }
+    this._emitter.emit('shift', element.item, this);
     return element.item;
+  }
+  on(...args) {
+    return this._emitter.on(...args);
+  }
+  once(...args) {
+    return this._emitter.once(...args);
+  }
+  remove(...args) {
+    return this._emitter.removeListener(...args);
+  }
+  clear(...args) {
+    return this._emitter.removeAllListeners(...args);
+  }
+  listeners(...args) {
+    return this._emitter.listeners(...args);
+  }
+  count(...args) {
+    return this._emitter.listenerCount(...args);
+  }
+  names() {
+    return this._emitter.eventNames();
   }
 }
 
