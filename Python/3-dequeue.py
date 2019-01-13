@@ -1,14 +1,14 @@
 from collections import deque
 
-obj1 = { 'name': 'first' }
-obj2 = { 'name': 'second' }
-obj3 = { 'name': 'third' }
+dict1 = {'name': 'first'}
+dict2 = {'name': 'second'}
+dict3 = {'name': 'third'}
 
 dequeue = deque()
 
-dequeue.append(obj1)
-dequeue.append(obj2)
-dequeue.appendleft(obj3)
+dequeue.append(dict1)
+dequeue.append(dict2)
+dequeue.appendleft(dict3)
 
 print(dequeue.pop())
 print(dequeue.popleft())

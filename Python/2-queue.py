@@ -1,14 +1,14 @@
 from queue import Queue
 
-obj1 = { 'name': 'first' }
-obj2 = { 'name': 'second' }
-obj3 = { 'name': 'third' }
+dict1 = {'name': 'first'}
+dict2 = {'name': 'second'}
+dict3 = {'name': 'third'}
 
 queue = Queue()
 
-queue.put(obj1)
-queue.put(obj2)
-queue.put(obj3)
+queue.put(dict1)
+queue.put(dict2)
+queue.put(dict3)
 
 print(queue.get())
 print(queue.get())
