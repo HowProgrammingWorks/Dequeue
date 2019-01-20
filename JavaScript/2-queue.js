@@ -35,12 +35,12 @@ const obj1 = { name: 'first' };
 const obj2 = { name: 'second' };
 const obj3 = { name: 'third' };
 
-const list = new Queue();
-list.put(obj1);
-list.put(obj2);
-list.put(obj3);
+const queue = new Queue();
+queue.put(obj1);
+queue.put(obj2);
+queue.put(obj3);
 
-console.dir(list.pick());
-console.dir(list.pick());
-console.dir(list.pick());
-console.dir(list.pick());
+console.dir(queue.pick());
+console.dir(queue.pick());
+console.dir(queue.pick());
+console.dir(queue.pick());
