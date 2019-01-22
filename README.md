@@ -1,6 +1,6 @@
 # Stack, Queue and Dequeue
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/9KvA4hDDSjk/0.jpg)](https://www.youtube.com/watch?v=9KvA4hDDSjk)
+[![Структуры данных: списки, стек, очередь, дэк](https://img.youtube.com/vi/9KvA4hDDSjk/0.jpg)](https://www.youtube.com/watch?v=9KvA4hDDSjk)
 
 Задания (на выбор):
 - Реализовать стек, очередь и дэк на прототипах и замыканиях
