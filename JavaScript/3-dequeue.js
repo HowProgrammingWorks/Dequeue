@@ -5,6 +5,7 @@ class Dequeue {
     this.first = null;
     this.last = null;
   }
+
   push(item) {
     const last = this.last;
     const element = { prev: last, next: null, item };
@@ -16,6 +17,7 @@ class Dequeue {
       this.last = element;
     }
   }
+
   pop() {
     const element = this.last;
     if (!element) return null;
@@ -27,6 +29,7 @@ class Dequeue {
     }
     return element.item;
   }
+
   unshift(item) {
     const first = this.first;
     const element = { prev: null, next: first, item };
@@ -38,6 +41,7 @@ class Dequeue {
       this.last = element;
     }
   }
+
   shift() {
     const element = this.first;
     if (!element) return null;

@@ -4,11 +4,13 @@ class Stack {
   constructor() {
     this.last = null;
   }
+
   push(item) {
     const prev = this.last;
     const element = { prev, item };
     this.last = element;
   }
+
   pop() {
     const element = this.last;
     if (!element) return null;

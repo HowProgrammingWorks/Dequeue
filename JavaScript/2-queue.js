@@ -5,6 +5,7 @@ class Queue {
     this.first = null;
     this.last = null;
   }
+
   put(item) {
     const last = this.last;
     const element = { next: null, item };
@@ -16,6 +17,7 @@ class Queue {
       this.last = element;
     }
   }
+
   pick() {
     const element = this.first;
     if (!element) return null;
