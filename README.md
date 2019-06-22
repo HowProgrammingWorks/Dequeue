@@ -1,5 +1,7 @@
 # Stack, Queue and Dequeue
 
+[![Структуры данных: списки, стек, очередь, дэк](https://img.youtube.com/vi/9KvA4hDDSjk/0.jpg)](https://www.youtube.com/watch?v=9KvA4hDDSjk)
+
 Задания (на выбор):
 - Реализовать стек, очередь и дэк на прототипах и замыканиях
 - Реализовать стек через 2 класса (Stack + Element), то же и с очередью и дэком
