@@ -26,6 +26,7 @@ class Dequeue {
       this.last = null;
     } else {
       this.last = element.prev;
+      this.last.next = null;
     }
     return element.item;
   }
@@ -50,6 +51,7 @@ class Dequeue {
       this.last = null;
     } else {
       this.first = element.next;
+      this.first.prev = null;
     }
     return element.item;
   }
