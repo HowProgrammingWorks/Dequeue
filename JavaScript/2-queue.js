@@ -9,13 +9,9 @@ class Queue {
   put(item) {
     const last = this.last;
     const element = { next: null, item };
-    if (last) {
-      last.next = element;
-      this.last = element;
-    } else {
-      this.first = element;
-      this.last = element;
-    }
+    if (last) last.next = element;
+    else this.first = element;
+    this.last = element;
   }
 
   pick() {
